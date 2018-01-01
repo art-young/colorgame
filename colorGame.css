@@ -6,7 +6,7 @@ body {
 
 .square {
   width: 30%;
-  background: purple;
+  height: 30%;
   padding-bottom: 30%;
   float: left;
   margin: 1.66%;
@@ -18,7 +18,7 @@ body {
 
 #container {
   margin: 20px auto;
-  max-width: 600px;
+  max-width: 500px;
 }
 
 h1 {
@@ -30,10 +30,11 @@ h1 {
   margin: 0;
   text-transform: uppercase;
   padding: 20px 0;
+  font-size: 150%;
 }
 
 #colorDisplay {
-  font-size: 200%;
+  font-size: 150%;
 }
 
 #message {
@@ -45,7 +46,11 @@ h1 {
   background-color: white;
   height: 30px;
   text-align: center;
-  color: black;
+  padding-left: 5%;
+}
+
+#reset {
+  margin-right: 5%;
 }
 
 .selected {
