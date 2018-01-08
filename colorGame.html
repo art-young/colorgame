@@ -5,7 +5,7 @@
   <link rel="stylesheet" type="text/css" href="colorGame.css">
 </head>
 <body>
-  
+
   <h1>The Steez 
     <br>
     <span id="colorDisplay">RGB</span> 
@@ -19,9 +19,29 @@
     <button class="mode">Easy</button>
     <button class="mode selected">Intermediate</button>
     <button class="mode">Hard</button>
+    <button class="mode">Custom</button>
+  </div>
+
+  <div id="settingsOverlay">
+    <div id="popup">
+      <div id="fakeForm">
+        <div>
+          <h3>Custom Settings</h3>
+
+          <label for="numSquareSetting">Number of squares: </label>
+          <input type="text" id="numSquaresSetting" placeholder="Enter value 1-12">
+
+          <button id="saveSettings">Save</button>
+          <!-- <button id="closeSettings">Close</button> -->
+        </div>
+      </div>
+    </div>
   </div>
 
   <div id="container">
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
     <div class="square"></div>
     <div class="square"></div>
     <div class="square"></div>

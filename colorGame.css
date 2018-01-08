@@ -39,14 +39,16 @@ h1 {
 
 #message {
   display: inline-block;
-  width: 20%
+  width: 20%;
+  margin-left: 3%;
+  margin-right: 5%;
 }
 
 #stripe {
   background-color: white;
   height: 30px;
   text-align: center;
-  padding-left: 5%;
+  padding-left: 15%;
 }
 
 #reset {
@@ -75,4 +77,32 @@ button {
 button:hover {
   color: white;
   background: steelblue;
+}
+
+#settingsOverlay {
+  width: 100%;
+  height: 100%;
+  opacity: .95;
+  top: 0;
+  display: none;
+  position: fixed;
+  background-color: #313131;
+}
+
+#popup {
+  width: 80%;
+  height: 60%;
+  position: absolute;
+  left: 5%;
+  top: 20%;
+}
+
+#fakeForm {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  padding: 10px 50px;
+  border: 2px solid gray;
+  border-radius: 10px;
+  background-color: #fff;
 }

@@ -7,6 +7,8 @@ var messageDisplay = document.querySelector("#message");
 var h1 = document.querySelector("h1");
 var resetButton = document.querySelector("#reset");
 var modeButtons = document.querySelectorAll(".mode");
+var saveButton = document.querySelector("#saveSettings");
+var settingsForm = document.querySelector("#settingsOverlay");
 
 init();
 
@@ -15,7 +17,19 @@ function init(){
   setupModeButtons();
   setupSquares();
   setupResetButton();
+  setupSaveButton();
   reset();
+}
+
+// Add click event listener for Save custom settings button and reset game
+function setupSaveButton(){
+  saveButton.addEventListener("click", function(){
+    settingsForm.style.display = "none";
+    numSquaresInput = document.querySelector("#numSquaresSetting");
+    numSquares = numSquaresInput.value;
+    numSquaresInput.value = "";
+    reset();
+  });
 }
 
 // Add click event listeners for mode buttons to modify game board based on selected mode
@@ -27,16 +41,26 @@ function setupModeButtons(){
       modeButtons[0].classList.remove("selected");
       modeButtons[1].classList.remove("selected");
       modeButtons[2].classList.remove("selected");
+      modeButtons[3].classList.remove("selected");
       this.classList.add("selected");
+
+      // Change numSquares based on difficulty or pop up custom form for custom game
       if (this.textContent === "Easy")
         numSquares = 3;
       else if (this.textContent === "Intermediate")
         numSquares = 6;
-      else
+      else if (this.textContent === "Hard")
         numSquares = 9;
+      else
+        openCustomForm();
       reset();
     });
   }
+}
+
+// Opens a settings form where the user can configure custom game properties
+function openCustomForm(){
+  settingsForm.style.display = "block";
 }
 
 // Add click event listeners for all squares which contain game logic
