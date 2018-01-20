@@ -25,7 +25,7 @@ function init(){
 function setupSaveButton(){
   saveButton.addEventListener("click", function(){
     settingsForm.style.display = "none";
-    numSquaresInput = document.querySelector("#numSquaresSetting");
+    var numSquaresInput = document.querySelector("#numSquaresSetting");
     numSquares = numSquaresInput.value;
     numSquaresInput.value = "";
     reset();
